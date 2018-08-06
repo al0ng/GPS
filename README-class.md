@@ -3,7 +3,7 @@
 |GPS常用类|说明|
 |------|------|
 |MapActivity|用于显示Google Map的Activity类，需要连接底层网络|
-|MapView|用于显示地图的View组件，必须和MapActivity配合使用|
+|MapView|用于显示地图的View组件，必须和MapActivity配合使用;当MapView获得焦点时，可以控制地图的缩放和移动，MapView只能被MapActivity创建，这是因为mapview需要通过后台线程来链接网络或文件系统，而这些线程要由MapActivity来管理|
 |MapController|用于控制地图移动和伸缩，以某个GPS坐标为中心，控制MapView中的View组件，管理Overlay，提供View的基本功能，使用多种地图模式、卫星模式、街景模式来查看GoogleMap|
 |Overlay|是一个可显示于地图之上的可绘制的对象|
 |GeoPoint|是一个包含经纬度位置的对象|
@@ -19,3 +19,14 @@
 |animateTo(GeoPoint point)||
 |setCenter(GeoPoint point)||
 |setZoom(int zoomLevel)||
+
+#### MapView
+
+|MapView常用方法|说明|
+|-------|-------|
+|getController()||
+|getOverlays()||
+|setSatellite(boolean)||
+|setTraffic(boolean)||
+|setStreetView(boolean)||
+|setBuiltInZoomControls(boolean)||
